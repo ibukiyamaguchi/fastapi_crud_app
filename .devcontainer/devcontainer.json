@@ -13,7 +13,24 @@
 				"editor.formatOnSave": true,
 				"editor.codeActionsOnSave": {
 					"source.organizeImports": true
-				}
+				},
+				"explorer.confirmDragAndDrop": false,
+				"editor.minimap.enabled": false,
+				"git.autofetch": true,
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": false,
+				"python.linting.flake8Enabled": true,
+				"python.linting.lintOnSave": true,
+				"python.formatting.provider": "autopep8",
+				"autoDocstring.docstringFormat": "sphinx",
+				"python.formatting.autopep8Args": [
+					"--max-line-length=150",
+					"--ignore=E402"
+				],
+				"python.linting.flake8Args": [
+					"--max-line-length=150",
+					"--max-complexity=10"
+				]
 			},
 			"extensions": [
 				"ms-vscode-remote.vscode-remote-extensionpack",
@@ -41,7 +58,9 @@
 			]
 		}
 	},
-	"forwardPorts": [9090],
+	"forwardPorts": [
+		9090
+	],
 	"features": {
 		"docker-from-docker": "latest",
 		"git": "os-provided"
