@@ -1,0 +1,51 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "fastapi_crud_app",
+	"image": "mcr.microsoft.com/devcontainers/python:0-3.11",
+	"remoteEnv": {
+		"TZ": "Asia/Tokyo"
+	},
+	// Configure tool-specific properties.
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.organizeImports": true
+				}
+			},
+			"extensions": [
+				"ms-vscode-remote.vscode-remote-extensionpack",
+				"njpwerner.autodocstring",
+				"ms-azuretools.vscode-docker",
+				"hediet.vscode-drawio",
+				"mhutchie.git-graph",
+				"donjayamanne.githistory",
+				"eamodio.gitlens",
+				"oderwat.indent-rainbow",
+				"nickdemayo.vscode-json-editor",
+				"ms-toolsai.jupyter",
+				"pkief.material-icon-theme",
+				"ms-python.python",
+				"mechatroner.rainbow-csv",
+				"gruntfuggly.todo-tree",
+				"shardulm94.trailing-spaces",
+				"vue.volar",
+				"mosapride.zenkaku",
+				"usernamehw.errorlens",
+				"moshfeu.compare-folders",
+				"csholmq.excel-to-markdown-table",
+				"romanpeshkov.vscode-text-tables",
+				"redhat.vscode-yaml"
+			]
+		}
+	},
+	"forwardPorts": [9090],
+	"features": {
+		"docker-from-docker": "latest",
+		"git": "os-provided"
+	},
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip3 install -r requirements.txt"
+}
